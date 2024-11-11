@@ -64,7 +64,7 @@ router.post("/", authenticateToken, async (req, res, next) => {
           // httpOnly: true,
           // sameSite: "strict",
           // secure: true,
-          secure: false,
+          secure: true,
           sameSite: "lax",
         });
       } catch (err) {

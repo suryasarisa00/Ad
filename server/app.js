@@ -33,9 +33,9 @@ app.use(
       "https://999-passes.vercel.app",
       "https://accounts.google.com",
       "http://103.138.0.69",
-      // "http://192.168.0.169:4444",
-      // "http://192.168.38.101:4444",
-      // "http://localhost:4444",
+
+      "http://192.168.1.7:4444",
+      "http://localhost:4444",
     ],
     // origin: "*",
     allowedHeaders: "Content-Type, Authorization, ",
