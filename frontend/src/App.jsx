@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import Lock from "./pages/Lock";
 import Passes from "./pages/Passes";
+
 export default function App() {
   const [ePasses, setEPasses] = useState([]);
   const [gPasses, setGPasses] = useState([]);

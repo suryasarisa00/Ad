@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+
 function Passes({ gPasses, ePasses, login }) {
   useEffect(() => {
     // if (!login) navigate("/unlock");
