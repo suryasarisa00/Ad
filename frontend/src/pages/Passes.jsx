@@ -34,7 +34,6 @@ function Passes({ gPasses, ePasses, login }) {
 function Pass({ pass }) {
   const [showOldPasses, setShowOldPasses] = useState(false);
   const [noImg, setNoImg] = useState(pass.img?.endsWith("imgna.gif"));
-  // const url = "https://99-passes-b.vercel.app/auth";
   const url = import.meta.env.VITE_SERVER;
   const [img, setImg] = useState("");
 

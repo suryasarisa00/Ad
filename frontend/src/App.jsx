@@ -9,9 +9,8 @@ export default function App() {
   let [showError, setShowError] = useState();
   let [login, setLogin] = useState(false);
   let [isLoading, setIsLoading] = useState(false);
-  // const url = "https://99-passes-b.vercel.app/auth";
   const url = import.meta.env.VITE_SERVER;
-  // const url = "http://localhost:3000/auth";
+
   useEffect(() => {
     console.log(url);
     let permanent = JSON.parse(localStorage.getItem("permanent"));
