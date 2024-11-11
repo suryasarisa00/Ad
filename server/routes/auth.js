@@ -61,9 +61,11 @@ router.post("/", authenticateToken, async (req, res, next) => {
         let token = jwt.sign({ permanent: true }, process.env.JWT_SECRET);
         res.cookie("permanent", token, {
           maxAge: 36000000000,
-          httpOnly: true,
-          sameSite: "strict",
-          secure: true,
+          // httpOnly: true,
+          // sameSite: "strict",
+          // secure: true,
+          secure: false,
+          sameSite: "lax",
         });
       } catch (err) {
         console.log(err);
