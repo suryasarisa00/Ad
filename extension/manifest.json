@@ -1,0 +1,19 @@
+{
+  "name": "AddBlocker",
+  "description": "Someting unknown",
+  "manifest_version": 3,
+  "version": "0.0.1",
+
+  "icons": {
+    "16": "./pngwing.com.png",
+    "24": "./pngwing.com.png",
+    "32": "./pngwing.com.png"
+  },
+  "permissions": ["storage", "activeTab", "webNavigation", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["http://103.138.0.69/*"],
+      "js": ["script.js"]
+    }
+  ]
+}

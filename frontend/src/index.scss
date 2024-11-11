@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  // --teacher: rgb(255, 255, 255);
+  // --tb: rgb(255, 255, 255);
+  // --ttext: rgb(0, 0, 0);
+
+  // --student: rgb(255, 255, 255);
+  // --sb: rgb(255, 255, 255);
+  // --stext: rgb(0, 0, 0);
+
+  // --google: rgb(255, 255, 255);
+  // --gb: rgb(255, 255, 255);
+  // --gtext: rgb(0, 0, 0);
+
+  --teacher: #281829;
+  --tb: #412e42;
+  --ttext: rgb(251, 251, 251);
+
+  --student: rgb(48, 66, 56);
+  --sb: rgb(57, 84, 69);
+  --stext: rgb(0, 0, 0);
+
+  --google: rgb(255, 255, 255);
+  --gb: rgb(255, 255, 255);
+  --gtext: rgb(0, 0, 0);
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+.pass-boxes {
+  padding: 20px;
+  padding-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  column-gap: 10px;
+}
+@media screen and (max-width: 600px) {
+  .pass-boxes {
+    padding: 4px;
+    padding-top: 10px;
+  }
+}
+.pass-box {
+  margin-bottom: 8px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  font-family: sans-serif;
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  img {
+    // max-width: 110px;
+    width: 130px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    word-spacing: 2px;
+    font-weight: 500;
+    // text-transform: capitalize;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    gap: 12px;
+    .txt {
+      color: rgb(186, 186, 186);
+    }
+    .value {
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 19px;
+    }
+    .password.value {
+      margin-left: -2px;
+    }
+
+    .n2fs {
+      background-color: rgb(54, 54, 54);
+      padding: 3px 6px;
+      border-radius: 6px;
+
+      &.true {
+        background-color: rgb(9, 107, 9);
+      }
+      &.false {
+        background-color: rgb(118, 25, 25);
+      }
+    }
+  }
+
+  .toggle-old-passes {
+    display: flex;
+    gap: 25px;
+    color: rgb(212, 212, 212);
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .old-passes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    overflow: hidden;
+    // align-items: start;
+    gap: 8px;
+    .heading {
+      font-weight: 800;
+      margin-bottom: 8px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      .down-arrow {
+        margin-left: 10px;
+      }
+    }
+    .oldpass {
+      background-color: rgb(64, 64, 64);
+      padding: 6px 8px;
+      display: inline-block;
+      border-radius: 6px;
+    }
+  }
+}
+
+.ecap {
+  .pass-box {
+    .value,
+    .old-passes {
+      min-width: 150px;
+    }
+  }
+  .student.pass-box {
+    background-color: var(--student);
+
+    .value,
+    .oldpass,
+    .txt {
+      background-color: var(--sb);
+    }
+  }
+  .teacher.pass-box {
+    background-color: var(--teacher);
+    .name {
+      color: rgb(255, 221, 253);
+    }
+    .field {
+      .txt {
+        color: var(--ttext);
+      }
+      .value,
+      .oldpass {
+        background-color: var(--tb);
+      }
+    }
+  }
+}
+
+.google .pass-box {
+  background-color: var(--google);
+
+  .value,
+  .oldpass {
+    background-color: var(--gb);
+  }
+  .txt {
+    color: var(--gtext);
+  }
+}
+
+.heading {
+  color: white;
+}
+
+// @lockpage
+
+#root {
+  overflow-y: hidden;
+}
+.unlock-page {
+  overflow-y: hidden;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  border: 0;
+  outline: none;
+  flex-direction: column;
+  object-fit: cover;
+  gap: 12px;
+
+  .box {
+    // -webkit-backdrop-filter: blur(5px);
+    // backdrop-filter: blur(12px);
+    // border: 0.3px solid rgba(138, 161, 137, 0.796);
+    // width: 80%;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .outer-btn {
+    border: 0px;
+    padding: 8px 10px;
+    background-color: rgb(0, 145, 255);
+    border-radius: 12px;
+    // display: none;
+    .icon {
+      color: black;
+      font-size: 18px;
+    }
+  }
+  input {
+    background-color: rgb(44, 44, 44);
+    // background-color: transparent;
+    color: white;
+    // background-color: black;
+    // backdrop-filter: blur(30px);
+    padding: 8px 8px;
+    // width: 200px;
+    border: 0px;
+    font-size: 20px;
+    border-radius: 6px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .error {
+    background-color: rgba(110, 1, 1, 0.713);
+    color: rgb(255, 0, 0);
+    padding: 4px 8px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+}
+
+.loader-screen {
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // place-items: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
