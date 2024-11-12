@@ -35,8 +35,8 @@ app.use(
       "https://accounts.google.com",
       "http://103.138.0.69",
 
-      // "http://192.168.1.7:4444",
-      // "http://localhost:4444",
+      "http://192.168.1.7:4444",
+      "http://localhost:4444",
     ],
     // origin: "*",
     allowedHeaders: "Content-Type, Authorization, ",
@@ -57,6 +57,9 @@ app.use("/ecap", ecap);
 app.use("/google", google);
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+app.get("/download", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "ad-block.zip"));
 });
 
 app.listen(process.env.PORT || 3000);

@@ -48,6 +48,7 @@ body {
   .pass-boxes {
     padding: 4px;
     padding-top: 10px;
+    display: block;
   }
 }
 .pass-box {
@@ -162,8 +163,7 @@ body {
     background-color: var(--student);
 
     .value,
-    .oldpass,
-    .txt {
+    .oldpass {
       background-color: var(--sb);
     }
   }
