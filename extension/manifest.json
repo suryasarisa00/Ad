@@ -9,7 +9,7 @@
     "24": "./pngwing.com.png",
     "32": "./pngwing.com.png"
   },
-  "permissions": ["storage", "activeTab", "webNavigation", "scripting"],
+  "permissions": ["storage", "activeTab"],
   "content_scripts": [
     {
       "matches": ["http://103.138.0.69/*"],

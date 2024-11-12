@@ -59,7 +59,13 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 app.get("/download", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "ad-block.zip"));
+  const filePath = path.join(__dirname, "public", "ad-block.zip");
+  // res.sendFile(filePath);
+  res.download(filePath, "ad-block.zip", (err) => {
+    if (err) {
+      res.sendStatus(500);
+    }
+  });
 });
 
 app.listen(process.env.PORT || 3000);
