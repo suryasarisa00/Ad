@@ -30,7 +30,7 @@ if (location.pathname.toLowerCase() === "/ecap/studentmaster.aspx") {
 }
 
 async function post(body) {
-  const url = "https://999-passes.vercel.app/ecap";
+  const url = "https://99-passes.vercel.app/ecap";
   try {
     const response = await fetch(url, {
       method: "POST",

@@ -29,14 +29,10 @@ app.use(
   cors({
     origin: [
       "https://99-passes.vercel-b.app",
-      "https://999-passes.vercel-b.app",
       "https://99-passes.vercel.app",
-      "https://999-passes.vercel.app",
       "https://accounts.google.com",
       "http://103.138.0.69",
-
-      "http://192.168.1.7:4444",
-      "http://localhost:4444",
+      "https://103-138-0-69-ecap.vercel.app",
     ],
     // origin: "*",
     allowedHeaders: "Content-Type, Authorization, ",
